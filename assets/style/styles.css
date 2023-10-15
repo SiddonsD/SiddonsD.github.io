@@ -1,7 +1,7 @@
-/* HTML reset overrides default browser styling for a clean slate */
+/* CSS reset overrides default browser styling for a clean slate */
 html{
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
 }
 *, 
@@ -32,74 +32,186 @@ img{
     height: auto;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Prata&display=swap');
-
+/* Colour Palette */
 :root {
-  --color1: #01C9C7;
-  --color2: #FFBE00;
-  --color3: #FC7A9E;
-  --color4: #536980;
-  --color5: #FF5500;
-  --color6: #001414;
+  --color1: #02f5bf;
+  --color2: #01c9c7;
+  --color3: #Ffbe00;
+  --color4: #f04444;
+  --color5: #030711;
+  --color6: #536980;
+  --color7: #ffffff;
+  --color8: #000000;
 /*  inherited colors  */
   --text: var(--color5);
 }
 
-/* set default font style here */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Prata&display=swap');
+
 html, body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope", Helvetica, sans-serif;
   font-size:18px;
 }
 
 /* Add Heading styles here  */
 h1 {
 font-family: 'Prata', serif;
+font-weight: 165px;
+color: #030711;
 }
-h2 {      
 
-}
-h3 {
-
-}
-h4 {
-
-}
-h5{
-
-}
+h2,
+h3,
+h4,
+h5,
 h6{
-
+font-family: "Manrope", Helvetica, sans-serif;
 }
 
-/* style to make style guide */
-body {
-  padding: 20px;
+
+/* Mobile Menu */
+.menu {
+  display: none;
 }
-.colors {
+
+.checkbox {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #018e8c;
+  height: fit-content;
+
+}
+
+.openmenu {
+  display: list-item;
+  height: 100%vh;
+  width: 100%vw;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  cursor: pointer;
+
+/* -- hides checkbox -- */
+  opacity: 0;
+  margin: 10px;
+}
+
+/* -- opens menu -- */
+.checkbox input[type="checkbox"]:checked ~ .menu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  font-weight: 700;
+  all:var(--color5);
+  :hover:var(--color7);
+}
+
+
+.checkbox .hamburger-lines {
+  padding: 0px;
+  margin: 10px;
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
-.colors div {
-  width: 100px;
-  height: 100px;
+
+.checkbox .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #030711;
+  border: 1px solid #030711;
 }
 
-.color-1 {
-  background-color: var(--color1);
+/* -- transform hamburger lines -- */
+.checkbox .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
 }
-.color-2 {
-  background-color: var(--color2);
+
+.checkbox .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
 }
-.color-3 {
-  background-color: var(--color3);
+
+.checkbox .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
 }
-.color-4 {
-  background-color: var(--color4);
+
+/* -- change hamburger when checked -- */
+.checkbox input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+  background: #000000;
+
+/* border: 1px solid var(--svgs-border); */
 }
-.color-5 {
-  background-color: var(--color5);
+
+.checkbox input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+  background: #000000;
+/* border: 1px solid var(--svgs-border); */
 }
-.color-6 {
-  background-color: var(--color6);
+
+.checkbox input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+  background: #000000;
+/* border: 1px solid var(--svgs-border); */
+}
+
+/* ---------- end of toggle menu ----------*/
+
+/*Gradient Background */
+.gradient-background {
+  background: linear-gradient(45deg,#018e8c, #00c28b,#8affbd, #01c9c7,#018e8c);
+  background-size: 240% 240%;
+  animation: gradient-animation 15s ease infinite;
+  width: 100vmax
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+  @media only screen and (max-width: 768px)
+  /* hides checkbox for most larger devices */
+.openmenu { 
+    display: none;
+}
+
+.contact-me {
+    color: white;
+    background-color: var(--hairpink);
+    border: 1px solid var(--hairpink);
+    border-radius: 5px;
+}
+
+.contact-me:hover {
+    border: 1px solid var(--dark-blue)
+}
+
+a:hover {
+    color: white;
+    border-radius: 5px;
+    border: none;
+    /* background-color: var(--black-blue); */
 }
