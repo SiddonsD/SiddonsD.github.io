@@ -207,8 +207,44 @@ label a:hover {
   color: #F04444;
 }
 
+/* ---------- END Mobile Nav Menu ----------*/
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: 1200px;
+  }
 
+  .flex-items {
+    display: flex;
+		flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    }
+    
+    #flex-item_1
+    #flex-item_2
+    #flex-item_3
+    #flex-item_4{
+    height: 200px;
+    width: 200px;
+    background: #ffffff;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #333333;
+    border: 2px solid rgba(7, 7, 7, 0.12);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .cardimg {
+    width: 100px;
+  }
+
+/* Media query for smaller screens */
  @media only screen and (min-width: 768px){ 
   .mobilenav {
     display: none;
