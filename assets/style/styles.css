@@ -44,6 +44,7 @@ img{
 --paynesgrey: #536980;
 --white: #ffffff;
 --black: #000000;
+
 /*  inherited colors  */
 --text: var(--color5);
 }
@@ -70,7 +71,9 @@ h6{
 font-family: "Manrope", Helvetica, Arial, sans-serif;
 }
 
-/*Gradient Background */
+/* ---------- END Global Styles ---------- */
+
+/* Gradient Background */
 .gradient-background {
 background: linear-gradient(45deg,#018e8c, #00c28b,#8affbd, #01c9c7,#018e8c);
 background-size: 240% 240%;
@@ -90,8 +93,9 @@ width: 100vmax
 }
 }
 
-/* ---------- Mobile Nav ---------- */
+/* ---------- END Gradient Background ---------- */
 
+/* Mobile Nav */
 #logo{
 width: 50px;
 margin: 10px;
@@ -155,27 +159,23 @@ display: none;
 label input:checked+.menu {
 box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
 border-radius: 0;
-
 }
 
 label input:checked+.menu .hamburger {
 -webkit-transform: rotate(45deg);
 transform: rotate(45deg);
-
 }
 
 label input:checked+.menu .hamburger:after {
 -webkit-transform: rotate(90deg);
 transform: rotate(90deg);
 bottom: 0;
-
 }
 
 label input:checked+.menu .hamburger:before {
 -webkit-transform: rotate(90deg);
 transform: rotate(90deg);
 top: 0;
-
 }
 
 label input:checked+.menu+ul {
@@ -207,6 +207,9 @@ label a:hover {
 color: #F04444;
 }
 
+/*---------- END Mobile Nav ----------*/
+
+/* Experience Section */
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -243,7 +246,7 @@ color: #F04444;
 width: 100px;
 }
 
-/* Media query for smaller screens */
+/* ---------- Media Queries (for Desktop) ---------- */
 @media only screen and (min-width: 768px){ 
 .mobilenav {
   display: none;
