@@ -4,88 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Denise Siddons</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- <script src="menu.js"></script> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/styles.css">
+    <script src="menu.js"></script>
 </head>
 <body>
-    <header>
-       <img src="images/logo.png">
-       <nav class="navbar">
-        <ul class="menu">
-           <a href="">Home</a>
-           <a href="">Portfolio</a>
-           <a href="">Digital Garden</a>
-           <a href="">Blog</a>
-           <a href="">Contact</a>
-        </ul>
-       </nav>
+    <nav class="mobilenav">
+        <img id="logo" src="assets/images/logo.png">
+        <label>
+            <input type="checkbox">
+            <span class="menu"><span class="hamburger"></span></span>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Digital Garden</a></li>
+              <li><a href="#">Blog</a> </li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            </label>
+      </nav>
     </header>
 <main>
     <section id="hero">
-        <img src="images/hero.png">
-        <h1> Insert Catchy Tagline (Or Two)</h1>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-            aliquip ex ea commodo consequat.</h3>
-        <a href="" class="button">Let's Work Together</a>
-        <img src="images/profile.png">
-        <h2>Hi, I'm Denise...
-        </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-           aliquip ex ea commodo consequat. Duis aute irur
-        
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-           incididunt ut labore et dolore magna aliqua. 
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-           commodo consequat.
-        </p>
-        <a href="" class="button">Download Resume</a>
+      <div class="gradient-background-teal">
+        <img class="heroimg" src="assets/images/hero.png">
+            <!-- <svg class="heroimg" src="assets/images/hero.svg"></svg> -->
+            <p><span class="title">aspiring developer</span></p>
+            <p><span class="title">analytical problem solver</span></p>
+            <p><span class="title">data enthusiaist</span></p>
+            <p><span class="title">lover of all things creative design</span></p>
+            <p><span class="title">believer in the power of continuous learning.</span></p>
+            <p><span class="sub-title">I am all about embracing life, getting things done and having fun along the way. 
+                                        One line of code at a time. Let's connect and make things happen!</span></p>
+            <a href="" class="button">Let's Work Together</a>
+        </div>
     </section>
+        <section id="bio">
+            <img class="profileimg" src="assets/images/profile.png">
+            <div class="textbox" id="intro">
+            <span class="title">Hi, I'm Denise.</span>
+            <p><span class="sub-title">
+                An aspiring full stack web developer in Perth, Western Australia. I am currently elevating my creative skills with 
+                technical panache through the She Codes Plus Program.
+            </span>
+        </p><br>
+            <p><span class="sub-title">
+                My journey into the coding world has been a tad unconventional, given a background in marketing communications 
+                and change management is not your typical developer pathway. Whilst it might seem an odd pairing on the surface,
+                the combination of understanding the target audience, engaging stakeholders and a healthy appreciation for practical 
+                creative design brings a unique perspective to the table.
+            </span>
+        </p><br>
+            <p><span class="sub-title">
+                For me, this is where the magic happens. Building digital experiences people love to interact with.
+            </span>
+        </p><br>
+            <p><span class="sub-title">
+                Online, I can be found on the usual platforms as well as a very occasionally tended digital garden - 
+                it's a small space on the web I explore where my curiosity takes me. And much like me, a continuous work in progress.
+            </span>
+        </p><br>
+            <p><span class="sub-title">
+                When not basking in the glow of my laptop screen or working on a creative project, I can be found playing hometown 
+                tourist, exploring all the delightful new additions to our local small bar and café scene, dreaming up an overseas trip 
+                (because the post-Covid travel fomo is real), or doing culinary experiments in the kitchen with moderate success.
+            </span>
+        </p><br>
+            <a href="" class="button">Download Resume</a>
+    </div>
+</section>    
     <section class="Experience">
-        <article id="Experience">
-            <h1>Experience</h1>
-            <img src="images/speech-bubble.gif" class="experienceicon"/>
-            <img src="images/icon_2.png" class="experienceicon"/>
-            <img src="images/icon_3.png" class="experienceicon"/>
-            <img src="images/icon_4.png" class="experienceicon"/>
-        </article>
+        <article class="Experience">
+            <div class="gradient-background-teal">
+            <h1 class="title">Experience</h1>
+              <div class="flex-container">
+                <div class="flex-items" id="flex-item_1">
+                    <img class="cardimg" src="assets/images/webdev.gif" alt="animated icon of a website wireframe"/>
+                    <h3><b>Web Development</b></h3>
+                </div>
+                <div class="flex-items" id="flex-item_2">
+                    <img class="cardimg" src="assets/images/digital.gif" alt="animated icon of a computer monitor and mobile device"/>
+                    <h3><b>Digital</b></h3>
+                </div>
+                <div class="flex-items" id="flex-item_3">
+                    <img class="cardimg" src="assets/images/design.gif" alt="animated lightbulb flashing on"/>     
+                    <h3><b>Design</b></h3>
+                </div>
+                <div class="flex-items" id="flex-item_4">
+                    <img class="cardimg" src="assets/images/marketing.gif" alt="animated target with arrow hitting bullseye"/> 
+                    <h3><b>Marketing</b></h3>
+                </div>
+            </div>
+            </div>
     </section>
-    <section class="Projects">
-        <h1>Projects</h1>
-        <article id="Project-1">
-            <img src="images/project_1" class="projectimage"/>
-            <h3>Project Name</h3>
-            <h4>Work Category</h4>
-            <p>Going forward, we should leverage the asset. Harness 
-                the plan and markets. Actualize skillsets to achieve optimal goals.
+    <section class="projects">
+        <div class="gradient-background-blue">
+        <h1 class="title">Projects</h1>
+        <div class="scrolling_container">
+          <article class="project_card" id="scroll_project_1">
+            <img class="projectimg" src="assets/images/project.jpg">
+            <h3>Project Name</h3><br/>
+            <h5>Work Category</h5>
+            <p>Going forward, we should leverage the asset. Harness
+               the plan and markets. Actualize skillsets to achieve optimal goals.
             </p>
-            <a herf="">View Project</a>
-        </article>
-        <article id="Project-2">
-            <img src="images/project_2" class="projectimage"/>
-            <h3>Project Name</h3>
-            <h4>Work Category</h4>
-            <p>Going forward, we should leverage the asset. Harness 
-                the plan and markets. Actualize skillsets to achieve optimal goals.
+            <button><a href="">View Project</a></button>
+          </article>
+          <article class="project_card" id="scroll_project_2">
+            <img class="projectimg" src="assets/images/project.jpg">
+            <h3>Project Name</h3><br/>
+            <h5>Work Category</h5>
+            <p>Going forward, we should leverage the asset. Harness
+               the plan and markets. Actualize skillsets to achieve optimal goals.
             </p>
-            <a herf="">View Project</a>
-        </article>
-        <article id="Project-3">
-            <img src="images/project_3" class="projectimage"/>
-            <h3>Project Name</h3>
-            <h4>Work Category</h4>
-            <p>Going forward, we should leverage the asset. Harness 
-                the plan and markets. Actualize skillsets to achieve optimal goals.
+            <button><a href="">View Project</a></button>
+          </article>
+          <article class="project_card" id="scroll_project_3">
+            <img class="projectimg" src="assets/images/project.jpg">
+            <h3>Project Name</h3><br/>
+            <h5>Work Category</h5>
+            <p>Going forward, we should leverage the asset. Harness
+               the plan and markets. Actualize skillsets to achieve optimal goals.
             </p>
-            <a herf="">View Project</a>
-        </article>
-    </section>
+            <button><a href="">View Project</a></button>
+          </article>
+        </div>
+      </section>
     <section class="contact">
         <form action="https://formspree.io/f/maygajgq" method="POST">
             <h1>Get in Touch</h1>
@@ -110,23 +153,25 @@
         </form>
     </section>
     <section id="footer">
-        <nav class="navfoot">
-            <article class="column" id="column-1">
-                <a href="">Home</a>
-                <a href="">Portfolio</a>
-                <a href="">Digital Garden</a>
-                <a href="">Blog</a>
-                <a href="">Contact</a>
-            </article>
-            <article class="column" id="column-2">
-                <a href="" img src="images/icon_nav.png"></a> <!--back up to top link-->
-                <h5>0414 463 644</h5>
-                <a href="" img src="images/icon_linkedin.png" class="socialicon"></a>
-                <a href="" img src="images/icon_github.png" class="socialicon"></a>
-                <a href="" img src="images/icon_behance.png" class="socialicon"></a>
-                <a href="" img src="images/icon_instagram.png" class="socialicon"></a>
+        <section id="footer">
+            <nav class="navfoot">
+                <article class="column" id="column-1">
+                    <a href="">Home</a>
+                    <a href="">Portfolio</a>
+                    <a href="">Digital Garden</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                    </article>
+                <article class="column" id="column-2">
+                    <a href="" img src="images/icon_nav.png"></a> <!--back up to top link-->
+                    <h3>0414 463 644</h3>
+                    <a href="" img src="assets/images/linkedin.png" class="socialicon"></a>
+                    <a href="" img src="assets/images/github.png" class="socialicon"></a>
+                    <a href="" img src="assets/images/behance.png" class="socialicon"></a>
+                    <!-- <a href="" img src="images/icon_instagram.png" class="socialicon"></a> -->
                 </article>         
-                <h6>copyright 2023</h6>
-        </nav>
+                    <h6>copyright 2023</h6>
+            </nav>
+        </section>
     </section>
 </main>
