@@ -280,9 +280,8 @@ label a:hover {
   margin: 25px;
 }
 #intro{
-  inline-size: 800px;
-  overflow-wrap: normal;
-  margin: 25px;
+  width: 100vmax;
+  margin: 50px;
 }
 #bio{
   background-color: #f9f3f3;
