@@ -336,7 +336,7 @@ label a:hover {
   flex-direction: column-reverse;
   align-items: center;
   min-height: auto;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-main-wrap, .bio-right-wrap {
@@ -348,14 +348,14 @@ label a:hover {
   text-align: left;
   padding: 1.5rem;
   margin-top: 180px;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-right-sidebar {
   max-height: 358px;
   width: auto;
   padding: 1.5rem;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-right-wrap {
@@ -572,19 +572,19 @@ ul {
 /* Bio Section */
 .bio {
   flex-direction: row;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-main-wrap{
   width: 65%;
   order: 1;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 } 
 
 .bio-right-wrap {
   width: 35%;
   order: 2;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-main-content {
