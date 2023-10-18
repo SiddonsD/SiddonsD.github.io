@@ -72,17 +72,29 @@ h6{
 }
 
 /*Formatting*/
-.title{
+.title-dark{
   font-family: "Prata";
   font-size: 2.5em;
   color: var(--oxfordblue);
   margin-right: 25px;
   line-height: 1.8;
   justify-content: left;
+}
 
-}.title::before{
+.title-light{
+  font-family: "Prata";
+  font-size: 2.5em;
+  color: var(--white);
+  margin-right: 25px;
+  line-height: 1.8;
+  justify-content: left;
+
+}
+
+.title::before{
   margin-top: 80px;
 }
+
 .title::after{
   margin-bottom: 50px;
 }
@@ -95,9 +107,9 @@ h6{
   justify-content: left;  
 }
 
-.sub-title::after{
+/* .sub-title::after{
   margin-bottom: 500px;
-}
+} */
 
 .body{
   font: "Manrope";
@@ -109,12 +121,18 @@ h6{
 }
 
 /* Mobile Nav */
-#logo{
-  width: 50px;
-  margin: 10px;
-  display: inline;
+.topnav {
+  display: none;
 }
-  
+
+.right-sidebar-floated-blocks {
+  box-sizing: border-box;
+}
+
+.right-sidebar-floated-blocks {
+  overflow: hidden;
+}
+ 
 label .menu {
   position: absolute;
   right: 20px;
@@ -217,8 +235,7 @@ label a {
   
 label a:hover {
   color: #F04444;
-}
-  
+} 
 /*---------- END Mobile Nav ----------*/
   
 /* Gradient Background Teal */
@@ -260,31 +277,89 @@ label a:hover {
     background-position: 0% 50%;
   }
 }
-  
 /* ---------- END Gradient Backgrounds ---------- */
+
+/* Contact Page */
+
+/* Footer */
 
 /* ---------- END Global Styles ---------- */
 
 /***** HOME PAGE ****/
 
+/* Header*/
+#logo{
+  width: 50px;
+  margin: 10px;
+  display: inline;
+}
+
 /* Hero Section */
-.heroimg{
-  height: 460px;
-  padding:20px;
-  margin: 50px;
+.gradient-background-teal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* min-height: 1050px; */
+}
+
+.main-wrap, .right-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-content {
+  min-height: 460px;
+  width: auto;
+}
+
+#hero-image {
+  flex-grow: 1;
+  min-width: 390px;
+}
+
+.right-sidebar {
+  text-align: left;
+  padding: 1rem;
+}
+
+.hero-text{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: left;
+  padding: 1.5rem;
 }
 
 /* Bio Section */
-.profileimg{
-  height: 358px;
-  margin: 25px;
+.bio {
+  flex-direction: column-reverse;
+  align-items: center;
+  min-height: auto;
+  background-color: var(--paynesgrey)
 }
-#intro{
-  width: 100vmax;
-  margin: 50px;
+
+.bio-main-wrap, .bio-right-wrap {
+  width: 100%;
+  box-sizing: border-box;
 }
-#bio{
-  background-color: #f9f3f3;
+
+.bio-main-content {
+  text-align: left;
+  padding: 1.5rem;
+  margin-top: 180px;
+  background-color: var(--paynesgrey)
+}
+
+.bio-right-sidebar {
+  max-height: 358px;
+  width: auto;
+  padding: 1.5rem;
+  background-color: var(--paynesgrey)
+}
+
+.bio-right-wrap {
+  order: 2;
 }
 
 /* Experience Section */
@@ -296,17 +371,11 @@ label a:hover {
   flex-wrap: wrap;
 }
 
-.flex-items {
+.flex-items { /*foratting for the experience tiles*/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between;
-}
-    
-#flex-item_1,
-#flex-item_2,
-#flex-item_3,
-#flex-item_4{
+  align-items: center;
   height: 200px;
   width: 200px;
   background: #ffffff;
@@ -319,7 +388,7 @@ label a:hover {
   margin-bottom: 10px;
 }
 
-.cardimg {
+.cardimg { /*experience gifs*/
   width: 100px;
 }
 
@@ -328,6 +397,8 @@ label a:hover {
 /* Projects Section Home Page */
 .scrolling_container {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -338,8 +409,8 @@ label a:hover {
 .project_card {
   flex: 0 0 auto;
   background-color: #f3f3f3;
-  width: 449px;
-  height: 933px;
+  width: 252px;
+  height: 557px;
   margin-right: 10px;
   padding: 20px;
   border-radius: 10px;
@@ -354,17 +425,17 @@ label a:hover {
 }
 
 .projectimg {
-  width: 449px;
-  height: 449px;
+  width: 252px;
+  height: 252px;
   max-width: 100%;
-  transform-origin: center;
+  /* transform-origin: center;
   transform: scale(var(--img-scale));
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out; */
 }
 
 /* ---------- END Projects Section */
 
-/***** PORTFOLIO ****/
+/***** PORTFOLIO PAGE ****/
 
 /* Project Gallery */
 .image-gallery {
@@ -455,28 +526,86 @@ ul {
 .image-gallery li:hover .overlay {
   transform: scale(1);
 }
-
 /* ---------- END Project Gallery ---------- */
 
-
-/* Form */
-
-
-/* Footer */
 
 /*-*-*-*-*- Media Queries (for Desktop) -*-*-*-*-*/
 @media only screen and (min-width: 768px){ 
 
+/* Top Nav */
 .mobilenav {
   display: none;
 }
-  
-.flex-container {
+.topnav a {
+  display: inline-block;
+}
+
+/* Hero Section */
+.gradient-background-teal {
+  flex-direction: row;
+}
+
+.main-wrap{
+  width: 45%;
+} 
+
+.right-wrap {
+  width: 55%;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 815px;
+}
+
+.right-sidebar {
+  display: flex;
   flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  max-height: fit-content;
+  
+}
+
+/* Bio Section */
+.bio {
+  flex-direction: row;
+  background-color: var(--paynesgrey)
+}
+
+.bio-main-wrap{
+  width: 65%;
+  order: 1;
+  background-color: var(--paynesgrey)
+} 
+
+.bio-right-wrap {
+  width: 35%;
+  order: 2;
+  background-color: var(--paynesgrey)
+}
+
+.bio-main-content {
+  max-width: 1385px;
+  text-align: left;
+}
+
+.bio-right-sidebar {
+  display: flex;
+  flex-direction: column;
+  max-height: 490px;
+}
+
+/* Experience Section */
+.flex-container {
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
+/* Home Page - Projects Section */
 .scrolling_container{
   width: auto;
   }
