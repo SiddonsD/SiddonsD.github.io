@@ -107,10 +107,6 @@ h6{
   justify-content: left;  
 }
 
-/* .sub-title::after{
-  margin-bottom: 500px;
-} */
-
 .body{
   font: "Manrope";
   font-size:  18px;
@@ -123,6 +119,12 @@ h6{
 /* Mobile Nav */
 .topnav {
   display: none;
+}
+
+.mobilenav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .right-sidebar-floated-blocks {
@@ -288,10 +290,20 @@ label a:hover {
 /***** HOME PAGE ****/
 
 /* Header*/
+header{
+  padding: 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 #logo{
+  display: flex;
+  align-self: flex-start;
   width: 50px;
   margin: 10px;
-  display: inline;
+  /* display: inline; */
 }
 
 /* Hero Section */
@@ -300,7 +312,6 @@ label a:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* min-height: 1050px; */
 }
 
 .main-wrap, .right-wrap {
@@ -314,8 +325,8 @@ label a:hover {
 }
 
 #hero-image {
-  flex-shrink: 1;
-  min-width: 390px;
+  size: 350px;
+  align-self: center;
 }
 
 .right-sidebar {
@@ -327,7 +338,6 @@ label a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex
   align-content: left;
   padding: 1.5rem;
 }
@@ -429,9 +439,9 @@ label a:hover {
   width: 252px;
   height: 252px;
   max-width: 100%;
-  /* transform-origin: center;
+  transform-origin: center;
   transform: scale(var(--img-scale));
-  transition: transform 0.4s ease-in-out; */
+  transition: transform 0.4s ease-in-out;
 }
 
 /* ---------- END Projects Section */
@@ -537,8 +547,22 @@ ul {
 .mobilenav {
   display: none;
 }
+
+.topnav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: row;
+}
+
 .topnav a {
   display: inline-block;
+  color: var(--oxfordblue);
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
 /* Hero Section */
@@ -560,13 +584,6 @@ ul {
   align-items: center;
   min-width: 815px;
 }
-
-.hero-text{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: left;
-  padding: 1.5rem;
 
 .right-sidebar {
   display: flex;
