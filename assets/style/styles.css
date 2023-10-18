@@ -298,6 +298,7 @@ label a:hover {
 .gradient-background-teal {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   /* min-height: 1050px; */
 }
@@ -307,14 +308,14 @@ label a:hover {
   box-sizing: border-box;
 }
 
-/* .main-content {
-  padding: 1rem;
-} */
-
 .main-content {
   min-height: 460px;
   width: auto;
-  /* padding: 1rem; */
+}
+
+#hero-image {
+  flex-grow: 1;
+  min-width: 390px;
 }
 
 .right-sidebar {
@@ -370,17 +371,11 @@ label a:hover {
   flex-wrap: wrap;
 }
 
-.flex-items {
+.flex-items { /*foratting for the experience tiles*/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between;
-}
-    
-#flex-item_1,
-#flex-item_2,
-#flex-item_3,
-#flex-item_4{
+  align-items: center;
   height: 200px;
   width: 200px;
   background: #ffffff;
@@ -393,7 +388,7 @@ label a:hover {
   margin-bottom: 10px;
 }
 
-.cardimg {
+.cardimg { /*experience gifs*/
   width: 100px;
 }
 
@@ -562,7 +557,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 812px;
+  min-width: 815px;
 }
 
 .right-sidebar {
