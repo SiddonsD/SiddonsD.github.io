@@ -107,9 +107,9 @@ h6{
   justify-content: left;  
 }
 
-.sub-title::after{
+/* .sub-title::after{
   margin-bottom: 500px;
-}
+} */
 
 .body{
   font: "Manrope";
@@ -235,8 +235,7 @@ label a {
   
 label a:hover {
   color: #F04444;
-}
-  
+} 
 /*---------- END Mobile Nav ----------*/
   
 /* Gradient Background Teal */
@@ -278,8 +277,11 @@ label a:hover {
     background-position: 0% 50%;
   }
 }
-  
 /* ---------- END Gradient Backgrounds ---------- */
+
+/* Contact Page */
+
+/* Footer */
 
 /* ---------- END Global Styles ---------- */
 
@@ -291,11 +293,13 @@ label a:hover {
   margin: 10px;
   display: inline;
 }
+
 /* Hero Section */
 .gradient-background-teal {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* min-height: 1050px; */
 }
 
 .main-wrap, .right-wrap {
@@ -303,30 +307,58 @@ label a:hover {
   box-sizing: border-box;
 }
 
-.main-content, .right-sidebar {
+/* .main-content {
   padding: 1rem;
-}
+} */
 
 .main-content {
-  height: auto;
+  min-height: 460px;
+  width: auto;
+  /* padding: 1rem; */
 }
 
 .right-sidebar {
-  text-align: center;
+  text-align: left;
+  padding: 1rem;
 }
 
+.hero-text{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: left;
+  padding: 1.5rem;
+}
 
 /* Bio Section */
-.profileimg{
-  height: 358px;
-  margin: 25px;
+.bio {
+  flex-direction: column-reverse;
+  align-items: center;
+  min-height: auto;
+  background-color: var(--paynesgrey)
 }
-#intro{
-  width: 100vmax;
-  margin: 50px;
+
+.bio-main-wrap, .bio-right-wrap {
+  width: 100%;
+  box-sizing: border-box;
 }
-#bio{
-  background-color: #f9f3f3;
+
+.bio-main-content {
+  text-align: left;
+  padding: 1.5rem;
+  margin-top: 180px;
+  background-color: var(--paynesgrey)
+}
+
+.bio-right-sidebar {
+  max-height: 358px;
+  width: auto;
+  padding: 1.5rem;
+  background-color: var(--paynesgrey)
+}
+
+.bio-right-wrap {
+  order: 2;
 }
 
 /* Experience Section */
@@ -499,14 +531,8 @@ ul {
 .image-gallery li:hover .overlay {
   transform: scale(1);
 }
-
 /* ---------- END Project Gallery ---------- */
 
-
-/* Form */
-
-
-/* Footer */
 
 /*-*-*-*-*- Media Queries (for Desktop) -*-*-*-*-*/
 @media only screen and (min-width: 768px){ 
@@ -524,25 +550,57 @@ ul {
   flex-direction: row;
 }
 
-.main-wrap, .right-wrap {
-  width: 50%;
-}
+.main-wrap{
+  width: 45%;
+} 
 
-.main-content, .right-sidebar {
-  height: 500px;
+.right-wrap {
+  width: 55%;
 }
 
 .main-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 812px;
 }
 
 .right-sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-start;
+  max-height: fit-content;
+  
+}
+
+/* Bio Section */
+.bio {
+  flex-direction: row;
+  background-color: var(--paynesgrey)
+}
+
+.bio-main-wrap{
+  width: 65%;
+  order: 1;
+  background-color: var(--paynesgrey)
+} 
+
+.bio-right-wrap {
+  width: 35%;
+  order: 2;
+  background-color: var(--paynesgrey)
+}
+
+.bio-main-content {
+  max-width: 1385px;
+  text-align: left;
+}
+
+.bio-right-sidebar {
+  display: flex;
+  flex-direction: column;
+  max-height: 490px;
 }
 
 /* Experience Section */
