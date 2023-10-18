@@ -314,7 +314,7 @@ label a:hover {
 }
 
 #hero-image {
-  flex-grow: 1;
+  flex-shrink: 1;
   min-width: 390px;
 }
 
@@ -327,6 +327,7 @@ label a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex
   align-content: left;
   padding: 1.5rem;
 }
@@ -336,7 +337,7 @@ label a:hover {
   flex-direction: column-reverse;
   align-items: center;
   min-height: auto;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-main-wrap, .bio-right-wrap {
@@ -348,14 +349,14 @@ label a:hover {
   text-align: left;
   padding: 1.5rem;
   margin-top: 180px;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-right-sidebar {
   max-height: 358px;
   width: auto;
   padding: 1.5rem;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-right-wrap {
@@ -560,6 +561,13 @@ ul {
   min-width: 815px;
 }
 
+.hero-text{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: left;
+  padding: 1.5rem;
+
 .right-sidebar {
   display: flex;
   flex-direction: column;
@@ -572,19 +580,19 @@ ul {
 /* Bio Section */
 .bio {
   flex-direction: row;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-main-wrap{
   width: 65%;
   order: 1;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 } 
 
 .bio-right-wrap {
   width: 35%;
   order: 2;
-  background-color: var(--paynesgrey)
+  background-color: #f9f3fb
 }
 
 .bio-main-content {
