@@ -89,9 +89,12 @@ h6{
   line-height: 1.8;
   justify-content: left;
 
-}.title::before{
+}
+
+.title::before{
   margin-top: 80px;
 }
+
 .title::after{
   margin-bottom: 50px;
 }
@@ -118,12 +121,18 @@ h6{
 }
 
 /* Mobile Nav */
-#logo{
-  width: 50px;
-  margin: 10px;
-  display: inline;
+.topnav {
+  display: none;
 }
-  
+
+.right-sidebar-floated-blocks {
+  box-sizing: border-box;
+}
+
+.right-sidebar-floated-blocks {
+  overflow: hidden;
+}
+ 
 label .menu {
   position: absolute;
   right: 20px;
@@ -276,12 +285,36 @@ label a:hover {
 
 /***** HOME PAGE ****/
 
-/* Hero Section */
-.heroimg{
-  height: 460px;
-  padding:20px;
-  margin: 50px;
+/* Header*/
+#logo{
+  width: 50px;
+  margin: 10px;
+  display: inline;
 }
+/* Hero Section */
+.gradient-background-teal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-wrap, .right-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-content, .right-sidebar {
+  padding: 1rem;
+}
+
+.main-content {
+  height: auto;
+}
+
+.right-sidebar {
+  text-align: center;
+}
+
 
 /* Bio Section */
 .profileimg{
@@ -478,16 +511,48 @@ ul {
 /*-*-*-*-*- Media Queries (for Desktop) -*-*-*-*-*/
 @media only screen and (min-width: 768px){ 
 
+/* Top Nav */
 .mobilenav {
   display: none;
 }
-  
-.flex-container {
-  flex-direction: column;
+.topnav a {
+  display: inline-block;
+}
+
+/* Hero Section */
+.gradient-background-teal {
+  flex-direction: row;
+}
+
+.main-wrap, .right-wrap {
+  width: 50%;
+}
+
+.main-content, .right-sidebar {
+  height: 500px;
+}
+
+.main-content {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Experience Section */
+.flex-container {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Home Page - Projects Section */
 .scrolling_container{
   width: auto;
   }
