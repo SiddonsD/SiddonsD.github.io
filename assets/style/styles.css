@@ -559,10 +559,21 @@ ul {
   display: inline-block;
   color: var(--oxfordblue);
   font-size: 1.1rem;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
   margin: 0 10px;
   padding: 0.5rem;
   border-radius: 4px;
+}
+
+.topnav a:hover {
+  background-color: var(--aquamarine);
+  color: var(--oxfordblue);
+
+.topnav a.active{
+  background-color: var(--oxfordblue);
+  color: var(--aquamarine);
 }
 
 /* Hero Section */
