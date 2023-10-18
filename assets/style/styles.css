@@ -314,7 +314,7 @@ label a:hover {
 }
 
 #hero-image {
-  flex-grow: 1;
+  flex-shrink: 1;
   min-width: 390px;
 }
 
@@ -327,6 +327,7 @@ label a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex
   align-content: left;
   padding: 1.5rem;
 }
@@ -559,6 +560,13 @@ ul {
   align-items: center;
   min-width: 815px;
 }
+
+.hero-text{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: left;
+  padding: 1.5rem;
 
 .right-sidebar {
   display: flex;
