@@ -1,4 +1,4 @@
-/* CSS reset overrides default browser styling for a clean slate */
+/***** CSS RESET *****/ /*(overrides default browser styling for a clean slate) */
 html{
   box-sizing: border-box;
   font-size: 18px;
@@ -32,7 +32,9 @@ img{
   height: auto;
 }
 
-/* ---------- Global Styles ---------- */
+/*---------- END CSS Reset ----------*/
+
+/*-*-*-*-* GLOBAL STYLES *-*-*-*-*/
 
 /* Colour Palette */
 :root {
@@ -55,6 +57,8 @@ img{
 html, body {
   font-family: "Manrope", Helvetica, sans-serif;
   font-size:18px;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -107,10 +111,6 @@ h6{
   justify-content: left;  
 }
 
-/* .sub-title::after{
-  margin-bottom: 500px;
-} */
-
 .body{
   font: "Manrope";
   font-size:  18px;
@@ -120,9 +120,46 @@ h6{
   justify-content: left;  
 }
 
-/* Mobile Nav */
+/* Header*/
+header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+header .sticky{
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  background-color: #f9f3f3;
+} 
+
+header .sticky + .content{
+  padding-top: 40px;
+} 
+
+#logo{
+  display: flex;
+  align-self: flex-start;
+  width: 50px;
+  margin: 20px 20px;
+  
+}
+
+/* Mobile Nav */ /*(displays as a floating hanburger menu on mobile and top nav on desktop)*/
 .topnav {
   display: none;
+}
+
+label .menu {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .right-sidebar-floated-blocks {
@@ -133,7 +170,7 @@ h6{
   overflow: hidden;
 }
  
-label .menu {
+label .menu { /*(hamburger menu background)*/
   position: absolute;
   right: 20px;
   top: 10px;
@@ -148,7 +185,7 @@ label .menu {
   cursor: pointer;
 }
   
-label .hamburger {
+label .hamburger { /*(hamburger menu lines)*/
   position: absolute;
   top: 30px;
   left: 16px;
@@ -156,15 +193,12 @@ label .hamburger {
   height: 4px;
   background: #01C9C7;
   display: block;
-  -webkit-transform-origin: center;
   transform-origin: center;
-  -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
 }
   
 label .hamburger:after,
-label .hamburger:before {
-  -webkit-transition: .5s ease-in-out;
+label .hamburger:before { /*(hamburger menu open close transition)*/
   transition: .5s ease-in-out;
   content: "";
   position: absolute;
@@ -174,11 +208,11 @@ label .hamburger:before {
   background: #01C9C7;
 }
   
-label .hamburger:before {
+label .hamburger:before { /*(hamburger menu open close transition)*/
   top: -10px;
 }
   
-label .hamburger:after {
+label .hamburger:after { /*(hamburger menu open close transition)*/
   bottom: -10px;
 }
   
@@ -192,18 +226,15 @@ label input:checked+.menu {
 }
   
 label input:checked+.menu .hamburger {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
   
 label input:checked+.menu .hamburger:after {
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   bottom: 0;
 }
   
 label input:checked+.menu .hamburger:before {
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   top: 0;
 }
@@ -212,21 +243,19 @@ label input:checked+.menu+ul {
   opacity: 1;
 }
   
-label ul {
+label ul { /*(hamburger menu open)*/
   z-index: 200;
   position: absolute;
-  top: 50%;
+  top: 500%;
   left: 50%;
   list-style-type: none;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
-  -webkit-transition: .25s 0s ease-in-out;
   transition: .25s 0s ease-in-out;
 }
   
-label a {
-  margin-bottom: 1em;
+label a { /*(hamburger menu content)*/
+  margin-top: 1.5em;
   font-size: 2em;
   display: block;
   color: #0C1831;
@@ -236,7 +265,11 @@ label a {
 label a:hover {
   color: #F04444;
 } 
+
+
 /*---------- END Mobile Nav ----------*/
+
+/*GRADIENT BACKGROUNDS*/
   
 /* Gradient Background Teal */
 .gradient-background-teal {
@@ -285,23 +318,17 @@ label a:hover {
 
 /* ---------- END Global Styles ---------- */
 
-/***** HOME PAGE ****/
+/*-*-*-*-* CUSTOM STYLES *-*-*-*-*/
 
-/* Header*/
-#logo{
-  width: 50px;
-  margin: 10px;
-  display: inline;
-}
+/***** HOME PAGE ****/
 
 /* Hero Section */
 .gradient-background-teal {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between;
   align-items: center;
-  /* min-height: 1050px; */
-}
+} */
 
 .main-wrap, .right-wrap {
   width: 100%;
@@ -314,8 +341,9 @@ label a:hover {
 }
 
 #hero-image {
-  flex-shrink: 1;
-  min-width: 390px;
+  display: block;
+  min-width: 350px;
+  padding: 50px;
 }
 
 .right-sidebar {
@@ -324,44 +352,48 @@ label a:hover {
 }
 
 .hero-text{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex
-  align-content: left;
+  display: block;
   padding: 1.5rem;
 }
 
 /* Bio Section */
 .bio {
   flex-direction: column-reverse;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-start;
   min-height: auto;
-  background-color: #f9f3fb
+  flex-grow: 1;
+   /* background-color: #f9f3fb */
+}
+#profileimage {
+  min-width: 346px;
+  padding: 1.5rem;
 }
 
-.bio-main-wrap, .bio-right-wrap {
+/* .bio-main-wrap, .bio-right-wrap {
   width: 100%;
   box-sizing: border-box;
+  background-color: var(--paynesgrey)
 }
 
 .bio-main-content {
   text-align: left;
   padding: 1.5rem;
-  margin-top: 180px;
-  background-color: #f9f3fb
+  margin-top: 180px; */
+  /* background-color: #f9f3fb */
 }
 
-.bio-right-sidebar {
+/* .bio-right-sidebar {
   max-height: 358px;
   width: auto;
   padding: 1.5rem;
   background-color: #f9f3fb
-}
+} */
 
-.bio-right-wrap {
+/* .bio-right-wrap {
   order: 2;
-}
+} */
 
 /* Experience Section */
 .flex-container {
@@ -372,7 +404,7 @@ label a:hover {
   flex-wrap: wrap;
 }
 
-.flex-items { /*foratting for the experience tiles*/
+.flex-items { /*flexbox foratting for the experience tiles*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -395,7 +427,7 @@ label a:hover {
 
 /*---------- END Experience Section ----------*/
 
-/* Projects Section Home Page */
+/* Projects Section */ /*(horizontal scrolling section - touch scroll on mobile, arrow navigation on desktop)*/
 .scrolling_container {
   display: flex;
   flex-direction: row;
@@ -429,12 +461,12 @@ label a:hover {
   width: 252px;
   height: 252px;
   max-width: 100%;
-  /* transform-origin: center;
+  transform-origin: center;
   transform: scale(var(--img-scale));
-  transition: transform 0.4s ease-in-out; */
+  transition: transform 0.4s ease-in-out;
 }
 
-/* ---------- END Projects Section */
+/* ---------- END Projects Section ---------- */
 
 /***** PORTFOLIO PAGE ****/
 
@@ -531,15 +563,80 @@ ul {
 
 
 /*-*-*-*-*- Media Queries (for Desktop) -*-*-*-*-*/
-@media only screen and (min-width: 768px){ 
+
+/* CSS for mobile devices */
+@media only screen and (max-width: 767px) {
+  
+.gradient-background-teal {
+flex-direction: column;
+}
+
+.main-wrap, .right-wrap {
+width: 100%;
+}
+
+.main-content {
+min-width: 0;
+width: 100%;
+}
+}
+
+@media only screen and (min-width: 768px) {
+#hero .gradient-background-teal {
+flex-direction: row;
+}
+  
+#hero .main-wrap {
+width: 50%;
+}
+  
+#hero .right-wrap {
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+  
+#hero .main-content {
+min-width: 815px;
+}
 
 /* Top Nav */
 .mobilenav {
   display: none;
 }
+
+.topnav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
 .topnav a {
   display: inline-block;
+  color: var(--oxfordblue);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 0.5rem;
+  border-radius: 4px;
 }
+
+/* .topnav a:hover {
+  background-color: var(--aquamarine);
+  color: var(--oxfordblue);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; */
+
+ /* .topnav a.active{
+  background-color: var(--oxfordblue);
+  color: var(--aquamarine);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; */
+
 
 /* Hero Section */
 .gradient-background-teal {
@@ -547,34 +644,15 @@ ul {
 }
 
 .main-wrap{
-  width: 45%;
+  width: 50%;
 } 
 
 .right-wrap {
-  width: 55%;
+  width: 50%;
 }
 
 .main-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-width: 815px;
-}
-
-.hero-text{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: left;
-  padding: 1.5rem;
-
-.right-sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: flex-start;
-  max-height: fit-content;
-  
 }
 
 /* Bio Section */
