@@ -625,17 +625,17 @@ min-width: 815px;
   border-radius: 4px;
 }
 
-/* .topnav a:hover {
+.topnav a:hover {
   background-color: var(--aquamarine);
   color: var(--oxfordblue);
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out; */
+  outline: var(--oxfordblue), 4px;
+  transition: .5s ease-in-out; 
 
  /* .topnav a.active{
   background-color: var(--oxfordblue);
   color: var(--aquamarine);
   -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out; */
+  transition: .5s ease-in-out;
 
 
 /* Hero Section */
