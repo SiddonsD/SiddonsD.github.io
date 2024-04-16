@@ -80,9 +80,7 @@ h6{
   font-family: "Prata";
   font-size: 2.5em;
   color: var(--oxfordblue);
-  margin-right: 25px;
   line-height: 1.8;
-  justify-content: left;
 }
 
 .title-light{
@@ -125,7 +123,7 @@ header{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 header .sticky{
@@ -147,7 +145,7 @@ header .sticky + .content{
 
 #logo{
   display: flex;
-  align-self: flex-start;
+  align-self: center;
   width: 50px;
   margin: 20px 20px;
   
@@ -328,93 +326,88 @@ label a:hover {
 
 /* Hero Section */
 .gradient-background-teal {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start; */
   display: flex;
-  flex-direction: column;
-  /* justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-} */
-
-.main-wrap, .right-wrap {
-  width: 100%;
-  box-sizing: border-box;
+  justify-content: center;
 }
 
-.main-content {
-  min-height: 460px;
-  width: auto;
+.main-wrap, .right-wrap {
+  flex: 1;
+  margin: 20px;
+}
+
+.main-content, .right-sidebar {
+  padding: 20px;
+  border: 2px solid #000;
+  box-sizing: border-box;
 }
 
 #hero-image {
   display: block;
-  min-width: 350px;
-  padding: 50px;
-}
-
-.right-sidebar {
-  text-align: left;
-  padding: 1rem;
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
+  border: 2px solid #000000;
+  box-sizing: border-box;
 }
 
 .hero-text{
   display: block;
   padding: 1.5rem;
+  border: 2px solid #000000;
+  box-sizing: border-box;
 }
 
 /* Bio Section */
 .bio {
-  flex-direction: column-reverse;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  min-height: auto;
-  flex-grow: 1;
-   /* background-color: #f9f3fb */
-}
-#profileimage {
-  min-width: 346px;
-  padding: 1.5rem;
+  justify-content: center;
 }
 
-/* .bio-main-wrap, .bio-right-wrap {
-  width: 100%;
+.bio-main-wrap, .bio-right-wrap {
+  flex: 1;
+  margin: 20px;
+}
+
+.bio-main-content, .bio-right-sidebar {
+  padding: 20px;
+  border: 2px solid #000;
   box-sizing: border-box;
-  background-color: var(--paynesgrey)
+  margin: 10px;
 }
 
-.bio-main-content {
-  text-align: left;
-  padding: 1.5rem;
-  margin-top: 180px; */
-  /* background-color: #f9f3fb */
+#profileimage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #000000;
 }
-
-/* .bio-right-sidebar {
-  max-height: 358px;
-  width: auto;
-  padding: 1.5rem;
-  background-color: #f9f3fb
-} */
-
-/* .bio-right-wrap {
-  order: 2;
-} */
 
 /* Experience Section */
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.experience-title {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.flex-items { /*flexbox foratting for the experience tiles*/
+.flex-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-items {
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  width: 200px;
   background: #ffffff;
   margin: 15px;
   border-radius: 10px;
@@ -422,11 +415,36 @@ label a:hover {
   border: 2px solid rgba(7, 7, 7, 0.12);
   font-size: 24px;
   text-align: center;
-  margin-bottom: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.flex-item-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%; /* ensure content does not exceed the tile size */
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%
 }
 
 .cardimg { /*experience gifs*/
-  width: 100px;
+  max-width: 60%; /* adjust tile image sise to suit */
+  max-height: 60%; 
+  margin-bottom: 10px; /* space between image and text */
+}
+
+.flex-items h3 {
+  font-size: 1em; /* adjust font size to suit */
+  margin: 0; /* remove default margins */
+  padding: 0 5%; /* padding to contain the text */
+  word-break: break-word; /* ensure text breaks to prevent overflow */
 }
 
 /*---------- END Experience Section ----------*/
@@ -569,42 +587,151 @@ ul {
 /*-*-*-*-*- Media Queries (for Desktop) -*-*-*-*-*/
 
 /* CSS for mobile devices */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) { 
 
-/*Hero Section*/
-  
+/* Mobile Nav */
+.topnav {
+  display: none;
+ }
+
+.mobilenav {
+  display: block;
+}
+
+/* Hero Section */
 .gradient-background-teal {
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-wrap, .right-wrap {
-width: 100%;
+  margin: 10px 0;
+  width: 100%;
 }
 
 .main-content {
-min-width: 0;
-width: 100%;
+  padding: 20px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+
+/* Bio Section */
+.bio {
+  flex-direction: column;
+}
+
+.bio-main-wrap {
+  width: 100%;
+  order: 2;
+}
+
+.bio-right-wrap {
+  width: 100%;
+  order: 1;
+}
+
+/* Experience Section */
+.flex-container {
+  justify-content: space-around;
+}
+
+.flex-items {
+  width: calc(50% - 30px);
+  height: calc(50vw - 30px);
+}
+
+.flex-item-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%; /* adjust padding to fit content within tile */
+}
+.cardimg {
+  width: 60%; /* adjust size to suit mobile */
+  height: auto;
+  margin-bottom: 10px; 
+}
+
+.flex-items h3 {
+  font-size: 5vw; /* prevent content overflow */
+  padding: 0 5%;
+  word-break: break-word; 
+}
+}
+
+@media only screen and (min-width: 1024px) {
+  .experience-title {
+    display: block; /* Ensure the title is a block-level element */
+    width: 100%; /* Force the title to take full width */
+  }
+
+  .flex-items { /* adjust the flex-basis for 4 items in a row and maintain the square ratio */
+    flex-basis: calc(25% - 60px); /* subtract margin x2 */
+    height: calc(25% - 60px); 
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+/* Hero Section */
+.gradient-background-teal {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrap, .right-wrap {
+  width: 100%;
+  flex-basis: auto;
+  margin: 10px 0;
+}
+
+/* Bio Section */
+#bio .bio {
+  flex-direction: column;
+}
+
+#bio .bio-main-wrap, #bio .bio-right-wrap {
+  width: 100%;
+  flex-basis: 100%;
+  order: 0;
+}
+
+#bio .bio-right-wrap {
+  order: -1;
 }
 }
 
 @media only screen and (min-width: 768px) {
+/* Hero Section */
+
 #hero .gradient-background-teal {
-flex-direction: row;
+  align-items: center;
 }
   
-#hero .main-wrap {
-width: 50%;
-}
-  
+/* #hero .main-wrap, .right-wrap {
+  width: 50%;
+} */
+
 #hero .right-wrap {
-width: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
+  /* width: 50%; */
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
   
 #hero .main-content {
-min-width: 815px;
+  /* width: auto; */
+  flex: 3;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 100%; */
 }
 
 /* Top Nav */
@@ -615,7 +742,7 @@ min-width: 815px;
 .topnav {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
 }
 
@@ -637,68 +764,38 @@ min-width: 815px;
   outline: var(--oxfordblue), 4px;
   transition: .5s ease-in-out; 
 
- /* .topnav a.active{
-  background-color: var(--oxfordblue);
-  color: var(--aquamarine);
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-
-
-/* Hero Section */
-.gradient-background-teal {
-  flex-direction: row;
-}
-
-.main-wrap{
-  width: 50%;
-} 
-
-.right-wrap {
-  width: 50%;
-}
-
-.main-content {
-  min-width: 815px;
-}
-
 /* Bio Section */
-.bio {
-  flex-direction: row;
-  background-color: #f9f3fb
+#bio .bio {
+  flex-direction: row-reverse;
 }
 
-.bio-main-wrap{
-  width: 65%;
-  order: 1;
-  background-color: #f9f3fb
-} 
-
-.bio-right-wrap {
-  width: 35%;
-  order: 2;
-  background-color: #f9f3fb
+#bio .bio-main-wrap {
+  flex: 3; /* 3 parts avail space - adjust ratio to suit with copy */
 }
 
-.bio-main-content {
-  max-width: 1385px;
+#bio .bio-right-wrap {
+  flex: 2; /* adjust ratio to suit with image */
+}
+
+#bio .bio-right-sidebar img {
+  max-width: 100%;
+  height: auto;
+}
+
+#bio .bio-main-content {
   text-align: left;
 }
 
-.bio-right-sidebar {
-  display: flex;
-  flex-direction: column;
-  max-height: 490px;
-}
-
 /* Experience Section */
-.flex-container {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+
+.flex-items {
+  width: calc(25% - 30px);
+  padding-bottom: calc(25% - 30px);
 }
 
 /* Home Page - Projects Section */
 .scrolling_container{
   width: auto;
   }
+}
 }
